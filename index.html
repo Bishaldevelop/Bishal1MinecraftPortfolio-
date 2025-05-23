@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio of Bishal1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      overflow: auto;
+      position: relative;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      text-align: justify;
+      transition: box-shadow 0.3s ease-in-out;
+      position: relative;
+      z-index: 1;
+      padding: 30px;
+      border: 2px solid #fff;
+      transform-origin: center bottom;
+    }
+
+    /* Heading Styles */
+    h1 {
+      text-align: center;
+      color: #4caf50;
+      margin-bottom: 15px;
+      position: relative;
+      font-size: 3em;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    /* Headings */
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+      color: #4caf50;
+      margin-bottom: 15px;
+    }
+
+    /* Text Styles */
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    /* Lists */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      background-color: #4caf50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #388e3c;
+    }
+
+    /* Administrative Skills Section */
+    .admin-skills,
+    .contact-info {
+      border: 2px solid #4caf50;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .admin-skills h2,
+    .contact-info h2 {
+      color: #4caf50;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .admin-skills ul,
+    .contact-info ul {
+      padding: 0;
+      color: #fff;
+      margin-left: 20px;
+    }
+
+    .admin-skills ul li,
+    .contact-info ul li {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    /* Text Color */
+    body {
+      color: #fff;
+    }
+
+    /* Link Color */
+    a {
+      color: #4caf50;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      color: #388e3c;
+    }
+
+    /* Icon Styles */
+    .fa {
+      margin-right: 5px;
+    }
+
+    /* Improved Card Layout */
+    .card {
+      background-color: #212121;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Additional Hover Animation */
+    .card:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Additional Styles for Animation */
+    .section:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Minecraft-themed styles */
+    .minecraft-bg {
+      background: url('yIUhX0qoMqeG9uGFy2ACCI7OcWcNLcy7fXDaTghWaIJ4yg-CQEivb_zccxNKeNdua2eJgIvLOWR4Gf65i3VsOvumvVyVslqtd9WLstnihOHp_N24wuvWnRxflBT4vzzkhSuiNKfV.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 50px 0;
+    }
+
+    .minecraft-title {
+      font-family: 'Minecraft';
+      font-size: 3em;
+      text-align: center;
+      color: #4caf50;
+      text-shadow: 2px 2px 4px #000;
+      margin-bottom: 30px;
+    }
+
+    /* Contact Button */
+    .contact-button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      background-color: #4caf50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      text-align: center;
+    }
+
+    .contact-button:hover {
+      background-color: #388e3c;
+    }
+
+    /* Server Box */
+    .server-box {
+      background-color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .server-box h3 {
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+    .server-box p {
+      color: #fff;
+    }
+  .update-section {
+    background-color: #121212;       /* Dark background like your cards */
+    border-left: 6px solid #4caf50;  /* Green accent similar to headings */
+    padding: 15px 30px;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .update-label {
+    font-weight: 700;
+    color: #4caf50;
+    font-size: 1rem;
+    user-select: none;
+    margin-right: 8px;
+    text-shadow: 0 0 4px #2e7d32;
+  }
+
+  .update-date {
+    font-weight: 600;
+    color: #81c784;
+    font-size: 1rem;
+    font-style: italic;
+    user-select: none;
+    text-shadow: 0 0 3px #388e3c;
+  }
+
+  </style>
+
+  <!-- Particle.js Library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+  // Dynamically sets today's date in "Month Day, Year" format on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const dateElem = document.getElementById('update-date');
+    if (!dateElem) return;
+
+    const today = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = today.toLocaleDateString('en-US', options);
+
+    dateElem.textContent = formattedDate;
+  });
+</script>
+</head>
+
+<body class="minecraft-bg">
+     <div class="container">
+        <h1 class="minecraft-title">Portfolio of Bishal1</h1>
+        <section id="update-section" class="update-section">
+        <div class="update-container">
+        <span class="update-label">Last updated:</span>
+        <span id="update-date" class="update-date">May 23, 2025</span>
+      </div>
+    </section>
+    <!-- Introduction Section -->
+    <section class="card intro-section">
+      <h2>Introduction:</h2>
+      <p>Hello, I'm Bishal1, a seasoned Minecraft enthusiast with a fervor for server management and community engagement. With a wealth of experience across various administrative roles, I bring a diverse skill set and a passion for creating vibrant gaming communities.</p>
+      <hr>
+    </section>
+
+    <!-- Age Section -->
+    <section class="card age-section">
+      <h2>Age: 22</h2>
+      <hr>
+    </section>
+
+    <!-- Server Management Experience Section -->
+    <section class="card experience-section">
+      <h2>Server Management Experience:</h2>
+      <div class="server-box">
+        <h3>SPARTAK GAMING - Chief Managing Officer</h3>
+        <p>As the Chief Managing Officer at SPARTAK GAMING, I led strategic initiatives and oversaw the day-to-day operations of the gaming community. My responsibilities included managing a diverse team, implementing innovative gameplay features, and fostering a collaborative environment to drive growth and player engagement.</p>
+      </div>
+
+      <div class="server-box">
+        <h3>Celestial Mc Network - Co-Owner/Manager</h3>
+        <p>Spearheaded server management, overseeing day-to-day operations and ensuring a smooth player experience. Implemented strategic changes, such as restructuring game mechanics and introducing new features, resulting in a significant increase in player engagement. Managed and led a team of administrators, fostering a collaborative and productive work environment.</p>
+      </div>
+
+      <div class="server-box">
+        <h3>CityCraft - Team Manager</h3>
+        <p>Managed a dynamic team of developers, moderators, and support staff, coordinating efforts to enhance server features and address player concerns. Initiated and executed community-driven events, such as themed building contests and in-game celebrations, fostering player interaction and community growth. Implemented innovative gameplay features, contributing to the server's uniqueness and popularity within the Minecraft community.</p>
+      </div>
+
+      <div class="server-box">
+        <h3>ChillzMC - Manager/Head Admin</h3>
+        <p>Headed the administrative team, focusing on player support, conflict resolution, and rule enforcement. Developed and implemented a comprehensive player support system, reducing response times and enhancing overall player satisfaction. Led efforts in server optimization, collaborating with developers to address technical challenges and improve overall server performance.</p>
+      </div>
+
+      <div class="server-box">
+        <h3>ThunderNode MC - Admin</h3>
+        <p>Administered server commands, plugins, and technical aspects to maintain a stable gaming environment. Collaborated with the development team to address technical challenges and implement custom features tailored to the server's unique gameplay experience. Provided technical support to players, troubleshooting and resolving issues to ensure a seamless gaming experience.</p>
+      </div>
+
+      <div class="server-box">
+        <h3>Azerith Asia - Admin Head</h3>
+        <p>Oversaw administrative processes, ensuring adherence to server policies and rules. Introduced innovative features, such as custom quests and events, enhancing overall gameplay experiences and player retention. Collaborated with the marketing team to promote the server, resulting in a substantial increase in player numbers and community engagement.</p>
+      </div>
+      
+      <div class="server-box">
+        <h3> JungleTopia - Staff Manager</h3>
+        <p>Managed a dynamic team of developers, moderators, and support staff, coordinating efforts to enhance server features and address player concerns. Initiated and executed community-driven events, such as themed building contests and in-game celebrations, fostering player interaction and community growth. Implemented innovative gameplay features, contributing to the server's uniqueness and popularity within the Minecraft community.</p>
+      </div>
+
+      <div class="server-box">
+        <h3>Nepiz Network - Survival</h3>
+        <p>As the Manager of Nepiz Network, I oversee the daily operations and player experience across multiple popular Minecraft server modes, including Survival, Kingdom, and Lifesteal. I lead and coordinate a dedicated team of administrators and developers, managing plugin configurations, server optimization, and community engagement. My responsibilities include implementing custom features like advanced GUIs, webhook event logging, and tailored broadcast messages to enhance gameplay. I prioritize server performance, security, and fostering a vibrant, friendly player community.</p>
+      </div>
+
+      <div class="server-box">
+        <h3>Eternity MC Survival</h3>
+        <p>Managing Eternity MC Survival as a separate Minecraft network, I focus on delivering a stable and engaging survival experience. I coordinate staff, handle technical configurations, and implement server features to maintain high player satisfaction. My role also involves optimizing server performance and cultivating an active community through events and responsive administration.</p>
+      </div>
+
+      <hr>
+    </section>
+
+    <!-- Administrative Skills Section -->
+    <section class="card skills-section admin-skills">
+      <h2>Administrative Skills:</h2>
+      <ul>
+        <li><i class="fa fa-check-circle"></i> Effective Communication</li>
+        <li><i class="fa fa-check-circle"></i> Conflict Resolution</li>
+        <li><i class="fa fa-check-circle"></i> Team Collaboration</li>
+        <li><i class="fa fa-check-circle"></i> Problem Solving</li>
+        <li><i class="fa fa-check-circle"></i> Decision Making</li>
+      </ul>
+      <hr>
+    </section>
+
+    <!-- Community Engagement Section -->
+    <section class="card community-section">
+      <h2>Community Engagement:</h2>
+      <p>Believe in fostering a strong sense of community through active engagement and meaningful interactions. From organizing in-game events to participating in community discussions, I strive to create an inclusive and enjoyable environment for all players.</p>
+      <hr>
+    </section>
+
+    <!-- Map-Making and Creativity Section -->
+    <section class="card creativity-section">
+      <h2>Map-Making and Creativity:</h2>
+      <p>Express creativity through intricate map designs and engaging gameplay elements. Adept at utilizing tools and mods to create immersive gaming experiences that captivate players and contribute to the overall success of the server.</p>
+      <hr>
+    </section>
+
+    <!-- Conflict Resolution Section -->
+    <section class="card resolution-section">
+      <h2>Conflict Resolution:</h2>
+      <p>Experienced in addressing conflicts and issues within the gaming community. Approach conflicts with a diplomatic mindset, aiming to find fair and amicable solutions that benefit all parties involved. Believe in maintaining a positive and harmonious gaming environment.</p>
+      <hr>
+    </section>
+
+    <!-- Server Improvements Section -->
+    <section class="card improvements-section">
+      <h2>Server Improvements:</h2>
+      <p>Actively contribute ideas and strategies for enhancing the overall gaming experience. From implementing exciting new features to refining existing gameplay mechanics, I am dedicated to the continuous improvement of server quality and player satisfaction.</p>
+      <hr>
+    </section>
+
+    <!-- Collaboration and Teamwork Section -->
+    <section class="card teamwork-section">
+      <h2>Collaboration and Teamwork:</h2>
+      <p>Work seamlessly within a team of dedicated individuals to achieve common goals. Understand the importance of collaboration in a gaming community and actively contribute to team discussions, projects, and decision-making processes.</p>
+      <hr>
+    </section>
+
+    <!-- Event Planning Section -->
+    <section class="card event-section">
+      <h2>Event Planning:</h2>
+      <p>Organize and execute in-game events that enhance the overall gaming experience. From themed competitions to community celebrations, I bring a creative touch to event planning, ensuring memorable experiences for players.</p>
+      <hr>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="card conclusion-section">
+      <h2>Conclusion:</h2>
+      <p>Passionate about contributing to the dynamic world of Minecraft servers, I am committed to leveraging my skills and experience to enhance the gaming experiences of players. Whether it's managing servers, resolving conflicts, or organizing engaging events, I am dedicated to creating a positive and enjoyable environment for the gaming community.</p>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="card contact-section contact-info">
+      <h2>Contact Information:</h2>
+      <ul>
+        <li><i class="fa fa-envelope"></i> Email: bishallamcihhane158@gmail.com</li>
+        <li><i class="fab fa-discord"></i> Discord: Bishal1#5223</li>
+        <li><i class="fas fa-gamepad"></i> Minecraft IGN: Bishal1</li>
+      </ul>
+      <a class="contact-button button" href="https://discord.gg/xPw4cRgmFS">Get In Touch</a>
+    </section>
+  </div>
+
+  <!-- Additional Styles for Animation -->
+  <style>
+    /* Hover Animation */
+    .section:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</body>
+
+</html>
